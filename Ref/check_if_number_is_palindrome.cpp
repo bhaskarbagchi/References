@@ -10,6 +10,9 @@ bool isPalindrome(int x) {
 		return true;
 	}
 	int div = 10;
+	while(x/div>=10) {
+		div = div*10;
+	}
 	cout<<"div = "<<div<<endl;
 	while(x!=0) {
 		if(x/div != x%10)
@@ -44,7 +47,7 @@ int main(int argc, char* argv[]) {
 	int x;
 	for(int i = 0; i<10; i++) {
 		cin>>x;
-		if(isPalindromeRec(x)){
+		if(isPalindrome(x)){
 			cout<<x<<" is a palindrome"<<endl;
 		}
 		else {
